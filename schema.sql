@@ -31,8 +31,8 @@ DROP COLUMN species;
 
 -- Add species_id column to the animals table 
 ALTER TABLE animals
-ADD COLUMN species_id INT GENERATED ALWAYS AS IDENTITY REFERENCES species (id);
+ADD COLUMN species_id INT REFERENCES species (id);
 
 -- Add owner_id which is a foreign key referencing the owners table to the animal table
 ALTER TABLE animals
-ADD COLUMN owner_id INT GENERATED ALWAYS AS IDENTITY REFERENCES owners (id);
+ADD COLUMN owner_id INT REFERENCES owners (id);
