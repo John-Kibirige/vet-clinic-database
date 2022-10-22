@@ -36,3 +36,27 @@ ADD COLUMN species_id INT REFERENCES species (id);
 -- Add owner_id which is a foreign key referencing the owners table to the animal table
 ALTER TABLE animals
 ADD COLUMN owner_id INT REFERENCES owners (id);
+
+/* Add join table for visits*/
+-- create vets table 
+CREATE TABLE vets(
+	id INT GENERATED ALWAYS AS IDENTITY,
+	name VARCHAR(100) NOT NULL,
+	age INT,
+	date_of_graduation DATE,
+	PRIMARY KEY(id)
+)
+
+-- creating specializations table 
+CREATE TABLE specializations(
+	vet_id INT REFERENCES vets(id),
+	species_id INT REFERENCES species(id)
+)
+
+-- creating visits table 
+CREATE TABLE visits(
+    animal_id INT REFERENCES animals(id),
+    vet_id INT REFERENCES vets(id),
+    date_of_visit DATE
+)
+
