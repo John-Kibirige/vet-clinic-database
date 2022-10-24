@@ -76,9 +76,10 @@ generate_series(1,2500000), 'owner_' ||
 generate_series(1,2500000) || 
 '@mail.com';
 
-
-
-
 /* ------------------------------ WEEK TWO -----------------------------------------*/
 
+-- create a non clustered index for animal id on  visits table
 CREATE INDEX animal_id_asc ON visits(animal_id ASC);
+
+-- create a non clustered index for vet id on visits table 
+CREATE INDEX vet_id_asc ON visits(vet_id ASC);
