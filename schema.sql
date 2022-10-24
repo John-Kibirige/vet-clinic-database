@@ -76,5 +76,9 @@ generate_series(1,2500000), 'owner_' ||
 generate_series(1,2500000) || 
 '@mail.com';
 
--- remove me 
-CREATE INDEX friends_name_asc ON friends(name ASC);
+
+
+
+/* ------------------------------ WEEK TWO -----------------------------------------*/
+
+CREATE INDEX animal_id_asc ON visits(animal_id ASC);
