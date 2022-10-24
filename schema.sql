@@ -83,3 +83,6 @@ CREATE INDEX animal_id_asc ON visits(animal_id ASC);
 
 -- create a non clustered index for vet id on visits table 
 CREATE INDEX vet_id_asc ON visits(vet_id ASC);
+
+-- create a non clustered index for email on owners table 
+CREATE INDEX vet_id_desc ON owners(email DESC);
